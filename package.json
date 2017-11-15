@@ -1,0 +1,21 @@
+{
+  "name": "gulp_web",
+  "version": "1.0.0",
+  "description": "gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Yiran",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "gulp-connect": "^5.0.0",
+    "gulp-less": "^3.3.2"
+  }
+}
