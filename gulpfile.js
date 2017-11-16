@@ -23,12 +23,29 @@ var connect = require('gulp-connect');
 // 新建html的任务
 gulp.task('html', function () {
     gulp.src('src/**/*.html')
-        .pipe(gulp.dest('dist/'))
-        .pipe(connect.reload()); // 生成到根目录dist文件夹下
+        .pipe(gulp.dest('dist/')) // 生成到根目录dist文件夹下
+        .pipe(connect.reload());
 });
 
 gulp.task('autohtml', function () {
     gulp.watch('src/**/*.html', ['html']);
+});
+
+// 拷贝css的任务
+gulp.task('copycss', function () {
+    gulp.src('src/**/*.css')
+        .pipe(gulp.dest('dist/'))
+        .pipe(connect.reload());
+});
+
+// 拷贝image的任务
+gulp.task('copyimage', function () {
+    gulp.src('src/image/*')
+        .pipe(gulp.dest('dist/image/'));
+});
+
+gulp.task('autoimage', function () {
+    gulp.watch('src/image/*', ['copyimage']);
 });
 
 // 新建css的任务
@@ -36,7 +53,7 @@ gulp.task('less', function () {
     gulp.src('src/**/*.less')
         .pipe(less())  // 编译less文件
         .pipe(gulp.dest('dist/'))
-        .pipe(connect.reload()); // 生成到根目录dist文件夹下
+        .pipe(connect.reload());
 });
 
 gulp.task('autocss', function () {
@@ -51,13 +68,13 @@ gulp.task('serve', function () {
         livereload: true
     });
 
-    // gulp.watch('dist/index.html', ['reload']);
+    gulp.watch('dist/index.html', ['reload']);
 });
 
-// gulp.task('reload', function () {
-//    gulp.src('dist/index.html')
-//        .pipe(connect.reload());
-// });
+gulp.task('reload', function () {
+   gulp.src('dist/index.html')
+       .pipe(connect.reload());
+});
 
 // 监听所有打包之后的文件变动，自动刷新页面
-gulp.task('default', ['autohtml', 'autocss', 'serve']);
+gulp.task('default', ['autohtml', 'autocss', 'copycss', 'autoimage', 'serve']);

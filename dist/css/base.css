@@ -1,0 +1,23 @@
+.fixed-bg {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: url("../image/lan.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: blur(2px);
+}
+.reuame-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 750px;
+  height: 440px;
+  margin-left: -375px;
+  margin-top: -220px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
