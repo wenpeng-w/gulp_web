@@ -1,9 +1,164 @@
-// --------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------
 // + 2017-11-16
 // + Yiran
-// --------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------
 @blur: 2px;
 
+// layout
+.grid-row {
+    position: relative;
+    margin: auto;
+    .grid-col_4_1, .grid-col_4_2, .grid-col_4_3, .grid-col_4_4 {
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+    .grid-col_4_1 {
+        width: 25%;
+    }
+    .grid-col_4_2 {
+        width: 50%;
+    }
+    .grid-col_4_3 {
+        width: 75%;
+    }
+    .grid-col_4_4 {
+        width: 100%;
+        float: none;
+        clear: both;
+    }
+}
+.grid-row:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+@media screen and (max-width: 1550px){
+    .grid-row {
+        width: 1200px;
+    }
+}
+@media screen and (max-width: 1250px){
+    .grid-row {
+        width: 900px;
+    }
+}
+@media screen and (max-width: 950px){
+    .grid-row {
+        width: 600px;
+    }
+}
+@media screen and (max-width: 650px){
+    .grid-row {
+        width: 100%;
+    }
+}
+
+// header
+.yi-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    background: url("../image/head_top_mask.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: bottom;
+}
+
+// footer
+.yi-footer {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #333;
+    .foot-item {
+        margin-bottom: 20px;
+        h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #999;
+        }
+        a {
+            color: #999;
+            font-size: 14px;
+            transition: all .2s linear;
+            &:hover {
+                color: #ccc;
+            }
+        }
+        .foot-about {
+            margin-top: 4px;
+            a {
+                display: inline-block;
+                width: 44px;
+                height: 44px;
+                line-height: 44px;
+                margin-right: 5px;
+                text-align: center;
+                border-radius: 50%;
+                border: 1px solid #666;
+                &:hover {
+                    background-color: #555;
+                }
+            }
+        }
+        .foot-nav {
+            a {
+                display: inline-block;
+                margin: 0 4px 4px 0;
+            }
+        }
+        .yi-desc {
+            p {
+                line-height: 1.6;
+                margin-bottom: 4px;
+                font-size: 14px;
+                color: #999;
+            }
+        }
+    }
+    .foot-copyright {
+        padding-top: 20px;
+        border-top: 1px solid #444;
+        p {
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+    }
+}
+
+.yi-nav-wrap {
+    float: right;
+}
+.nav {
+    height: 60px;
+    line-height: 60px;
+    .nav-item {
+        display: inline-block;
+        text-align: center;
+        padding: 0 10px;
+        margin-left: 10px;
+        color: #fff;
+        font-size: 16px;
+    }
+}
+.yi-head-change {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+}
+.yi-banner {
+    width: 100%;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center bottom;
+}
 // about page
 .fixed-bg {
     position: fixed;

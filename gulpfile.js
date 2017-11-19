@@ -42,6 +42,15 @@ gulp.task('copycss', function () {
         }));
 });
 
+// 拷贝css的任务
+gulp.task('copyjs', function () {
+    gulp.src('src/**/*.js')
+        .pipe(gulp.dest('dist/'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
 // 拷贝image的任务
 gulp.task('copyimage', function () {
     gulp.src('src/image/*')
@@ -78,7 +87,7 @@ gulp.task('less', function () {
 // });
 
 gulp.task('serve', function () {
-    gulp.start('copyimage', 'html', 'copycss', 'less');
+    gulp.start('copyimage', 'html', 'copyjs', 'copycss', 'less');
     browserSync.init({
         //指定服务器启动根目录
         server: {
@@ -92,6 +101,7 @@ gulp.task('serve', function () {
 
     gulp.watch('src/image/*', ['copyimage']);
     gulp.watch('src/**/*.html', ['html']);
+    gulp.watch('src/**/*.js', ['copyjs']);
     gulp.watch('src/**/*.css', ['copycss']);
     gulp.watch('src/**/*.less', ['less']);
 });
