@@ -146,6 +146,26 @@
   background-size: cover;
   background-position: center bottom;
 }
+.panel-list {
+  padding: 40px 0;
+}
+.panel-list .panel-box {
+  float: left;
+  width: 300px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.panel-list .panel-box .panel-item {
+  display: block;
+  padding-bottom: 60px;
+  margin-bottom: 20px;
+}
+.panel-list .panel-box .panel-item .cover {
+  padding-top: 100%;
+  background-size: cover;
+  background-position: 50%;
+}
 .fixed-bg {
   position: fixed;
   width: 100%;
