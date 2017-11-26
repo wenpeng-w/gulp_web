@@ -39,7 +39,7 @@ body{background-color:#f5f5f5}
 .yi-banner{width:100%;min-height:600px;background-size:cover;background-position:center bottom}
 .panel-list{padding:40px 0}
 .panel-list .panel-box{float:left;width:300px;padding-left:10px;padding-right:10px;box-sizing:border-box}
-.panel-list .panel-box .panel-item{position:relative;display:block;padding-bottom:54px;margin-bottom:20px;background-color:#222;box-shadow:1px 1px 2px rgba(0,0,0,.1);overflow:hidden}
+.panel-list .panel-box .panel-item{position:relative;display:block;padding-bottom:54px;margin-bottom:20px;background-color:#222;overflow:hidden}
 .panel-list .panel-box .panel-item .action{position:absolute;top:0;left:0}
 .panel-list .panel-box .panel-item .action span{display:inline-block;margin-left:20px;line-height:40px;color:#fff}
 .panel-list .panel-box .panel-item .action span i{display:inline-block;width:18px;height:18px;margin:-5px 4px 0 0;background:url(../image/xihuan.png) no-repeat;vertical-align:middle;background-size:18px}
@@ -47,9 +47,15 @@ body{background-color:#f5f5f5}
 .panel-list .panel-box .panel-item .info{position:absolute;top:100%;left:0;width:100%;height:110px;margin-top:-110px;background-color:#fff;transition:all .2s ease-in-out}
 .panel-list .panel-box .panel-item .info .title{height:54px;line-height:54px;margin:0 20px;font-size:16px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
 .panel-list .panel-box .panel-item .info .desc{height:36px;padding:0 20px;font-size:14px;line-height:18px;overflow:hidden}
-.panel-list .panel-box .panel-item:hover{background-color:transparent}
+.panel-list .panel-box .panel-item:hover{background-color:transparent;box-shadow:0 2px 18px rgba(0,0,0,.35)}
 .panel-list .panel-box .panel-item:hover .cover{opacity:1}
 .panel-list .panel-box .panel-item:hover .info{margin-top:-54px}
 .writing-box{min-height:500px}
 .fixed-bg{position:fixed;width:100%;top:0;bottom:0;background:url(../image/lan.jpg) no-repeat;background-size:cover;background-position:center;z-index:-1;filter:blur(2px)}
 .reuame-panel{position:absolute;top:50%;left:50%;width:750px;height:440px;margin-left:-375px;margin-top:-220px;background-color:#fff;border-radius:6px;box-shadow:4px 4px 10px rgba(0,0,0,.3)}
+.tools-wrap .tools-list{margin-right:-5px;font-size:0}
+.tools-wrap .tools-list .tools-item{display:inline-block;width:196px;margin:5px 5px 0 0}
+.tools-wrap .tools-list .tools-item .tag-item{display:block;width:100%;background-color:#fff}
+.tools-wrap .tools-list .tools-item .tag-item .tag-pic{width:100%;height:110px;vertical-align:top}
+.tools-wrap .tools-list .tools-item .tag-item .tag-desc{padding:10px 4px}
+.tools-wrap .tools-list .tools-item .tag-item .tag-desc span{display:inline-block;height:40px;overflow:hidden;font-size:14px;line-height:20px}
