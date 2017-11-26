@@ -15,12 +15,13 @@
     "browser-sync": "^2.18.13",
     "cheerio": "^1.0.0-rc.2",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
     "gulp-ejs": "^3.1.0",
-    "gulp-jsbeautifier": "^2.1.1"
+    "gulp-jsbeautifier": "^2.1.1",
+    "gulp-less": "^3.3.2"
   },
   "dependencies": {
     "gulp-connect": "^5.0.0",
-    "gulp-less": "^3.3.2",
     "request": "^2.83.0"
   }
 }

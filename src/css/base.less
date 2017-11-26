@@ -1,13 +1,19 @@
 // --------------------------------------------------------------------------------------------------
-// + 2017-11-16
-// + Yiran
+// + time: 2017-11-16
+// + author: Yiran
 // --------------------------------------------------------------------------------------------------
-@blur: 2px;
 
 // layout
 .grid-row {
     position: relative;
     margin: auto;
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
     .grid-col_4_1, .grid-col_4_2, .grid-col_4_3, .grid-col_4_4 {
         float: left;
         padding-left: 10px;
@@ -28,13 +34,6 @@
         float: none;
         clear: both;
     }
-}
-.grid-row:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
 }
 @media screen and (max-width: 1550px){
     .grid-row {
@@ -67,12 +66,25 @@ body {
     width: 100%;
     height: 60px;
     z-index: 1000;
-    background: url("../image/head_top_mask.png");
-    background-repeat: repeat-x;
-    background-size: contain;
-    background-position: bottom;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0,0,0,.2);
+    //background: url("../image/head_top_mask.png");
+    //background-repeat: repeat-x;
+    //background-size: contain;
+    //background-position: bottom;
+    .yi-nav-wrap {
+        float: right;
+    }
 }
-
+.header-placeholder {
+    width: 100%;
+    height: 60px;
+    visibility: hidden;
+}
+.yi-head-change {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+}
 // footer
 .yi-footer {
     width: 100%;
@@ -136,9 +148,7 @@ body {
     }
 }
 
-.yi-nav-wrap {
-    float: right;
-}
+// 头部公共导航
 .nav {
     height: 60px;
     line-height: 60px;
@@ -147,13 +157,9 @@ body {
         text-align: center;
         padding: 0 10px;
         margin-left: 10px;
-        color: #fff;
+        color: #4d4d4d;
         font-size: 16px;
     }
-}
-.yi-head-change {
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
 }
 .yi-banner {
     width: 100%;
@@ -161,8 +167,7 @@ body {
     background-size: cover;
     background-position: center bottom;
 }
-.yi-content {
-}
+
 .panel-list {
     padding: 40px 0;
     .panel-box {
@@ -246,6 +251,11 @@ body {
     }
 }
 
+// writings page
+.writing-box {
+    min-height: 500px;
+}
+
 // about page
 .fixed-bg {
     position: fixed;
@@ -256,7 +266,7 @@ body {
     background-size: cover;
     background-position: center;
     z-index: -1;
-    filter: blur(@blur);
+    filter: blur(2px);
 }
 .reuame-panel {
     position: absolute;
